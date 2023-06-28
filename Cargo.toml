@@ -7,7 +7,7 @@ authors = ["eternal-flame-AD"]
 description = "A library for verifying Yubico OTPs"
 license = "Apache-2.0"
 repository = "https://github.com/eternal-flame-AD/yubico_otp_rs"
-keywords = ["yubico", "otp", "2fa", "two-factor", "authentication", "rust"]
+keywords = ["yubico", "otp", "2fa", "two-factor", "authentication"]
 categories = ["api-bindings", "cryptography"]
 readme = "README.md"
 
