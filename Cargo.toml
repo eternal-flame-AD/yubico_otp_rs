@@ -1,0 +1,38 @@
+[package]
+name = "yubico_otp"
+version = "0.1.0"
+edition = "2021"
+
+authors = ["eternal-flame-AD"]
+description = "A library for verifying Yubico OTPs"
+license = "Apache-2.0"
+repository = "https://github.com/eternal-flame-AD/yubico_otp_rs"
+keywords = ["yubico", "otp", "2fa", "two-factor", "authentication", "rust"]
+categories = ["api-bindings", "cryptography"]
+readme = "README.md"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+reqwest = "0.11.18"
+rand = "0.8.5"
+hmac = "0.12.1"
+sha1 = "0.10.5"
+base64 = "0.21.2"
+thiserror = "1.0.40"
+tokio = { version = "1.29.0", features = ["rt", "macros", "rt-multi-thread"], optional = true }
+dotenvy = { version = "0.15.7", optional = true }
+
+[dev-dependencies]
+tokio = { version = "1.29.0", features = ["rt", "macros", "rt-multi-thread"] }
+dotenvy = "0.15.7"
+
+[features]
+bin = ["tokio", "dotenvy"]
+
+[[bin]]
+name = "yubico_otp_verify"
+path = "src/bin/yubico_otp_verify.rs"
+required-features = ["bin"]
+
+
